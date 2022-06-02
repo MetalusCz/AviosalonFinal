@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Objednavka</title>
+</head>
+<body>
+    <div class="cela_stranka">
+        <header id="hlava">
+            <div class="item">
+                <img src="obrazky/letadlo.jpg" alt="Letadlo">
+                <div class="hlavaText">
+                    <h2>Vítáme Vás na stránkách Aviosalonu Speed & Death</h2>
+                    <p>Nabízíme Vám skvosty letecké techniky v podobě značek Boeing, Airbus, Tupolev a Embraer</p>
+                </div>
+            </div>
+        </header>
+         <!-- hamburger -->
+         <nav class="navbar">
+            <div class="menu">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">ÚVOD</a></li>
+                    <li><a href="boeing.html" class="nav-link" target="_blank">BOEING</a></li>
+                    <li><a href="airbus.html" class="nav-link" target="_blank">AIRBUS</a></li>
+                    <li><a href="embraer.html" class="nav-link" target="_blank">EMBRAER</a></li>
+                    <li><a href="tupolev.html" class="nav-link" target="_blank">TUPOLEV</a></li>
+                    <li><a href="objednavka.html" class="nav-link" target="_blank">OBJEDNÁVKA</a></li>
+                    <li><a href="letiste.html" class="nav-link" target="_blank">LETIŠTĚ</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        <main id="main">
+            <div class="obsah">   
+                <div class="letadloClass">
+                    <br />
+                    <h4>Objednavka:</h4>
+                    <br />
+                    <img src="obrazky/kokpit.jpg" title="Boeing">
+                </div>
+            </div>
+        </main>
+        <aside id="aside">
+            <div class="bocniMenu">
+                <ul>
+                    <li><a href="https://www.boeing.com/" target="_blank">
+                        <img src="obrazky/boeing.jpg" title="Boeing"></a>
+                    </li>
+                    <li><a href="https://www.airbus.com/en" target="_blank">
+                        <img src="obrazky/airbus.jpg" title="Airbus"></a>
+                    </li>
+                    <li><a href="https://embraer.com/global/en" target="_blank">
+                        <img src="obrazky/embraer.jpg" title="Embraer"></a>
+                    </li>
+                    <li><a href="https://www.britannica.com/topic/Tupolev" target="_blank">
+                        <img src="obrazky/tupolev.jpg"title="Tupolev"></a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <footer id="pata">
+            <div class="paticka">
+                <b>Aviosalon Speed & Death</b>
+                <p>email: projekt.avio@avio.com</p>
+                <p>tel: +420 123 456 789</p>
+                <p><b>adresa:</b></p>
+                <p>Na letišti 30</p>
+                <p>Ostrava</p>
+                <a href="#" target="_blank">ODKAZ GIT</a>
+                <br />
+                <p><small>&copy David Hejna</small></p>
+            </div>
+            <div class="videoPlayer">
+                <video width="240" height="150" controls>
+                    <source src="obrazky/vidlet.mp4" type="video/mp4">
+                </video>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger")
+        const navMenu = document.querySelector(".nav-menu")
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active")
+            navMenu.classList.toggle("active")
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+
+    </script>
+</body>
+</html>
